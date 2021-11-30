@@ -48,11 +48,11 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.205.1003.0005" -v aria2:aria2/AV backup:aria2/AV
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.220.1024.0005" -v aria2:aria2/AV backup:aria2/AV
           echo "谷歌下载盘备份完毕"
 
-      # - name: Delete workflow runs
-      #   uses: GitRML/delete-workflow-runs@main
-      #   with:
-      #     retain_days: 7
-      #     keep_minimum_runs: 550
+      - name: Delete workflow runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 7
+          keep_minimum_runs: 550
