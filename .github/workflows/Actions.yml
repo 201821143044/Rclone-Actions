@@ -48,7 +48,7 @@ jobs:
           # 更改时区
           sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.220.1024.0005" -v aria2:aria2/外语剧集 backup:aria2/外语剧集
+          ./rclone sync --user-agent "NONISV|Microsoft|Microsoft OneDrive for Windows/21.220.1024.0005" -v aria2:aria2/八方论坛 backup:aria2/八方论坛
           echo "谷歌下载盘备份完毕"
 
       - name: Delete workflow runs
