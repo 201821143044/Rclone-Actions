@@ -45,7 +45,7 @@ jobs:
         cd openwrt-18.06/siflower/openwrt-18.06
         sudo ./scripts/gen_config.py target_siflower_gl-sf1200
         echo "target_siflower_gl-sf1200完毕"
-        sed -i "/helloworld/d" "feeds.conf.default"
+        sudo sed -i "/helloworld/d" "feeds.conf.default"
         echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
         echo "helloworld完毕"
         ./scripts/feeds update -a
