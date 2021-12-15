@@ -48,6 +48,8 @@ jobs:
     - name: Clone source code
       working-directory: /workdir
       run: |
+        git config --global user.email "201821143044@scuec.edu.cn"
+        git config --global user.name "201821143044"
         git clone https://github.com/zheshifandian/gl-infra-builder.git
         cd gl-infra-builder
         sudo python3 setup.py -c config-siflower-18.x.yml
