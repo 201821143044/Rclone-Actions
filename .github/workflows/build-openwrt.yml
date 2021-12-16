@@ -31,7 +31,10 @@ jobs:
         
     - name: Create new user
       run: |
-        sudo adduser -p 123456 --gecos "" builder
+        sudo adduser "builder" <<EOF
+        12345
+        12345
+        EOF
         echo "新建用户完成"
         su builder -c "123456"
         echo "ok!"
