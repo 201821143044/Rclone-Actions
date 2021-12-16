@@ -31,9 +31,7 @@ jobs:
         
     - name: Create new user
       run: |
-        sudo adduser builder
-        45632
-        45632
+        sudo adduser --disabled-password --gecos "" builder
         echo "新建用户完成"
         su builder
         echo "切换用户完成"
