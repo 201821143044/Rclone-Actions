@@ -45,7 +45,6 @@ jobs:
         echo "用户切换成功"
          
     - name: Clone source code
-      working-directory: /workdir
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
