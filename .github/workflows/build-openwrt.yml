@@ -33,12 +33,7 @@ jobs:
       run: |
         sudo adduser --disabled-password --gecos "" builder
         echo "新建用户完成"
-        expect -c "
-        spawn su - builder
-        expect \":\"
-        send \"\r\"
-        interact
-        "
+        su builder -c ""
         echo "ok!"
          
     - name: Clone source code
