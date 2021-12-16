@@ -31,9 +31,9 @@ jobs:
         
     - name: Create new user
       run: |
-        sudo adduser --disabled-password --gecos "" builder
+        sudo adduser -p 123456 --gecos "" builder
         echo "新建用户完成"
-        su builder -c ""
+        su builder -c "123456"
         echo "ok!"
          
     - name: Clone source code
